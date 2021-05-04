@@ -28,7 +28,9 @@ function guessNumbers(){
   }
   return score
 }
-
+function wait15SecondsThenQuestion(){
+  alert(`You got ${guessNumbers()} out of ${randomNumbers.length} right`)
+}
 
 
 // PROGRAM STARTS HERE
@@ -36,7 +38,8 @@ function guessNumbers(){
 nummberQuantity = prompt('This is a memory tester to see how many numbers you can remember.\n\nHow many would you like me to test you with?')
 generateNumbers(nummberQuantity)
 alert(`Here are your numbers to remember:-\n${displayNumbers()}`)
-timeHandle=setTimeout(alert(`You got ${guessNumbers()} out of ${randomNumbers.length} right`),15000)
+timeHandle = setTimeout(wait15SecondsThenQuestion,15000)
+
 
 
 
