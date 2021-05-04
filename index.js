@@ -1,8 +1,10 @@
 // DECLARATION SECTION
 const randomNumbers = []
 
-numberQuantity=null
-numbersToRemember=""
+let numberQuantity=null
+let numbersToRemember=""
+let timeHandle=null
+
 
 function generateNumbers(numberQuantity){
   while (numberQuantity){
@@ -34,8 +36,8 @@ function guessNumbers(){
 nummberQuantity = prompt('This is a memory tester to see how many numbers you can remember.\n\nHow many would you like me to test you with?')
 generateNumbers(nummberQuantity)
 alert(`Here are your numbers to remember:-\n${displayNumbers()}`)
-setTimeout(15000)
-alert(`You got ${guessNumbers()} out of ${randomNumbers.length} right`)
+timeHandle=setTimeout(alert(`You got ${guessNumbers()} out of ${randomNumbers.length} right`),15000)
+
 
 
 
